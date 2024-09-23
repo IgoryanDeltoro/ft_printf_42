@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_hendle_args.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 10:48:14 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/23 21:47:23 by igoryan          ###   ########.fr       */
+/*   Created: 2024/09/23 21:23:31 by igoryan           #+#    #+#             */
+/*   Updated: 2024/09/23 22:31:03 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int ft_hendle_args(va_list args, char format)
 {
-	va_list		args;
-	const char	*f;
-	int	total_len;
-
-	va_start(args, format);
-	f = format;
-	total_len = 0;
-	while (*f)
-	{
-		if (*f == '%')
-		{
-			f++;
-			total_len += ft_hendle_args(args, *f);
-		}
-		else
-		{
-			total_len += ft_putchar(*f);
-		}
-		f++;
-	}
-	va_end(args);
-    return (total_len);
+    int count;
+    
+    count = 0;
+    if (format == 'c')
+        count += ft_putchar(va_arg(args, int));
+    else if (format == 's')
+        count += ft_putstr(va_arg(args, char*));
+    return (count);
 }

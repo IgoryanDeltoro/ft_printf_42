@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 10:48:14 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/23 21:47:23 by igoryan          ###   ########.fr       */
+/*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
+/*   Updated: 2024/09/23 21:49:53 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_putchar(char c)
 {
-	va_list		args;
-	const char	*f;
-	int	total_len;
-
-	va_start(args, format);
-	f = format;
-	total_len = 0;
-	while (*f)
+	if (c)
 	{
-		if (*f == '%')
-		{
-			f++;
-			total_len += ft_hendle_args(args, *f);
-		}
-		else
-		{
-			total_len += ft_putchar(*f);
-		}
-		f++;
-	}
-	va_end(args);
-    return (total_len);
+		write(1, &c, 1);
+		return (1);
+	}	
 }
