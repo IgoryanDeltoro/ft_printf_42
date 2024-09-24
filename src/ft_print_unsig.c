@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_unsig.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 10:43:46 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/24 19:40:19 by igoryan          ###   ########.fr       */
+/*   Created: 2024/09/24 19:37:35 by igoryan           #+#    #+#             */
+/*   Updated: 2024/09/24 19:40:56 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include "./libft/libft.h"
-# include <limits.h>
-# include <stdarg.h>
-# include <stdint.h>
+#include "../ft_printf.h"
 
-int	ft_printf(const char *format, ...);
-int	ft_print_char(char c);
-int	ft_hendle_args(va_list args, char format);
-int ft_print_unsig(unsigned int n);
-int ft_print_ptr(void *ptr);
-int	ft_print_str(char *s);
-int ft_print_int(int n);
+int ft_print_unsig(unsigned int n)
+{
+    
+}
 
-#endif
