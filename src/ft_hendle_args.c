@@ -6,7 +6,7 @@
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:23:31 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/24 19:37:21 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/09/24 23:41:02 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,11 @@ int	ft_hendle_args(va_list args, char format)
 		count += ft_print_int(va_arg(args, int));
 	if (format == 'u')
         count += ft_print_unsig(va_arg(args, unsigned int));
+	if (format == 'x')
+        //count += ft_print_hex(va_arg(args, unsigned int), 0);
+    if (format == 'X')
+     	//count += ft_print_hex(va_arg(args, unsigned int), 1);
+    if (format == '%')
+        count += ft_print_char('%');
 	return (count);
 }
