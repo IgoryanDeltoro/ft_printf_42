@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/23 21:49:53 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/09/24 11:08:13 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	ft_putchar(char c)
 	{
 		write(1, &c, 1);
 		return (1);
-	}	
+	}
+	return (0);
 }

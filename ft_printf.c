@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:48:14 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/23 21:47:23 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/09/24 09:24:56 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_printf(const char *format, ...)
 {
 	va_list		args;
 	const char	*f;
-	int	total_len;
+	int			total_len;
 
 	va_start(args, format);
 	f = format;
@@ -35,5 +35,5 @@ int	ft_printf(const char *format, ...)
 		f++;
 	}
 	va_end(args);
-    return (total_len);
+	return (total_len);
 }

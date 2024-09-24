@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 22:19:43 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/23 22:28:34 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/09/24 09:25:49 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
-    int i;
-    
-    i = 0;
+	int i;
+
+	i = 0;
 	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
 		i++;
 	}
-    return (i);
+	return (i);
 }
