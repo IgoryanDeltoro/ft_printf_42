@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 22:19:43 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/24 09:25:49 by ibondarc         ###   ########.fr       */
+/*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
+/*   Updated: 2024/09/24 18:56:19 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_print_char(char c)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (c)
 	{
-		write(1, &s[i], 1);
-		i++;
+		write(1, &c, 1);
+		return (1);
 	}
-	return (i);
+	return (0);
 }

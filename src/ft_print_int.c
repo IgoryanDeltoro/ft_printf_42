@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/24 11:08:13 by ibondarc         ###   ########.fr       */
+/*   Created: 2024/09/24 19:11:05 by igoryan           #+#    #+#             */
+/*   Updated: 2024/09/24 19:18:21 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putchar(char c)
+int ft_print_int(int n)
 {
-	if (c)
-	{
-		write(1, &c, 1);
-		return (1);
-	}
-	return (0);
+    int count;
+    char    *result;
+
+    result = ft_itoa(n);
+    count += ft_print_str(result);
+    free(result);
+    return (count);
 }

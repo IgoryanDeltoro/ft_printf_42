@@ -3,8 +3,8 @@ CC = cc
 FLAG = -Wall -Wextra -Werror 
 RM = rm -rf
 
-SRC =	ft_printf.c ./src/ft_putchar.c ./src/ft_hendle_args.c ./src/ft_putstr.c \
-		./src/ft_put_ptr.c
+SRC =	ft_printf.c ./src/ft_print_char.c ./src/ft_hendle_args.c ./src/ft_print_str.c \
+		./src/ft_print_ptr.c ./src/ft_print_int.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

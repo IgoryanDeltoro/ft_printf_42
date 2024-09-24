@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hendle_args.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:23:31 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/24 09:40:44 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/24 19:09:32 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ int	ft_hendle_args(va_list args, char format)
 
 	count = 0;
 	if (format == 'c')
-		count += ft_putchar(va_arg(args, int));
+		count += ft_print_char(va_arg(args, int));
 	else if (format == 's')
-		count += ft_putstr(va_arg(args, char *));
+		count += ft_print_str(va_arg(args, char *));
     else if (format == 'p')
-		count += ft_put_ptr(va_arg(args, unsigned long long));
+		count += ft_print_ptr(va_arg(args, void *));
+	else if (format == 'd' || format == 'i')
+		count += ft_print_int(va_arg(args, int));
 	return (count);
 }
