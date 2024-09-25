@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 09:42:30 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/24 19:06:56 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/09/25 16:42:43 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	count_ptr(uintptr_t n)
 	int	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	while (n != 0)
 	{
 		len++;
@@ -44,7 +46,7 @@ static void	hendle_ptr(uintptr_t n)
 int	ft_print_ptr(void *ptr)
 {
 	uintptr_t	p;
-	int	count;
+	int			count;
 
 	count = 0;
 	p = (uintptr_t)ptr;

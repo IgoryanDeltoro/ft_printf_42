@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int.c                                     :+:      :+:    :+:   */
+/*   ft_get_length.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 19:11:05 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/25 17:20:08 by ibondarc         ###   ########.fr       */
+/*   Created: 2024/09/25 15:54:59 by ibondarc          #+#    #+#             */
+/*   Updated: 2024/09/25 17:06:11 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_print_int(int n)
+int	ft_get_length(unsigned int n, int type)
 {
-	char	*result;
-	int		count;
+	int	len;
 
-	result = ft_itoa(n);
-	count = ft_print_str(result);
-	free(result);
-	return (count);
+	len = 0;
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		len++;
+		n /= type;
+	}
+	return (len);
 }

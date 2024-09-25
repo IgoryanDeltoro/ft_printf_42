@@ -4,7 +4,8 @@ FLAG = -Wall -Wextra -Werror
 RM = rm -rf
 
 SRC =	ft_printf.c ./src/ft_print_char.c ./src/ft_hendle_args.c ./src/ft_print_str.c \
-		./src/ft_print_ptr.c ./src/ft_print_int.c ./src/ft_print_unsig.c
+		./src/ft_print_ptr.c ./src/ft_print_int.c ./src/ft_print_unsig.c \
+		./src/ft_get_length.c ./src/ft_print_hex.c 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

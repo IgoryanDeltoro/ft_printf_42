@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/24 18:56:19 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/09/25 17:24:55 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 int	ft_print_char(char c)
 {
 	if (c)
-	{
-		write(1, &c, 1);
-		return (1);
-	}
+		return (write(1, &c, 1));
 	return (0);
 }
