@@ -6,15 +6,13 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/25 17:24:55 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:27:59 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_print_char(char c)
 {
-	if (c)
-		return (write(1, &c, 1));
-	return (0);
+	return (write(1, &c, 1));
 }

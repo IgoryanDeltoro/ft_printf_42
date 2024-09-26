@@ -21,21 +21,21 @@ OBJ	= $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
 $(NAME): $(OBJ)
-	$(AR) $(NAME) $(OBJ)
+	@$(AR) $(NAME) $(OBJ)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 bonus: $(OBJ) $(BONUS_OBJ)
-	$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
+	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
 	
 clean:
-	$(REM) $(OBJ) $(BONUS_OBJ)
+	@$(REM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-	$(REM) $(NAME)	
+	@$(REM) $(NAME)	
 
 re: fclean all 
 

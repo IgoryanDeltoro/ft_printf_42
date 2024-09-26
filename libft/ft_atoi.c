@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 10:54:09 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/13 12:50:16 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:29:30 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	whitespace(const char *str, int *idx)
 {

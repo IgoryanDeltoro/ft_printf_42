@@ -6,13 +6,13 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:43:46 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:43:19 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:30:16 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include "./libft/libft.h"
+# include "./libft.h"
 # include <limits.h>
 # include <stdarg.h>
 # include <stdint.h>
