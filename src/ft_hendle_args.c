@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:23:31 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/25 16:43:36 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:27:59 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_hendle_args(va_list args, char format)
 {

@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:48:14 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/25 13:34:15 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:03:32 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -24,10 +24,15 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+			if (*format == ' ' || *format == '\0')
+			{
+				total_len += ft_print_str("-1");
+				break ;
+			}
 			total_len += ft_hendle_args(args, *format);
 		}
 		else
-			total_len += write(1, format, 1);		
+			total_len += ft_print_char(*format);
 		format++;
 	}
 	va_end(args);

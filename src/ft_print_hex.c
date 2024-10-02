@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:51:38 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:42:44 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:27:59 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_print_hex(unsigned int n, char format)
 {
