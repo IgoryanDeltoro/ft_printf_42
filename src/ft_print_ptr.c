@@ -6,7 +6,7 @@
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 09:42:30 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/10/02 23:19:20 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/10/02 23:41:26 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 int	ft_print_ptr(void *ptr)
 {
-	uintptr_t	p;
+	char	*hex_digits;
 	int			count;
 
-	count = 0;
-	p = (uintptr_t)ptr;
-	count += write(1, "0x", 2);
+	count = 0;	
+	hex_digits = "0123456789abcdef";
 	if (ptr == 0)
-		count += write(1, "0", 1);
+		count += ft_print_str("(nil)");
 	else
 	{
-		hendle_ptr(p);
-		count += count_ptr(p);
+		count += write(1, "0x", 2);
+		count += ft_puthex((uintptr_t)ptr, hex_digits);
 	}
 	return (count);
 }

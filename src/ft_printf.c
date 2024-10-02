@@ -6,7 +6,7 @@
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:48:14 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/10/02 23:17:53 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/10/02 23:20:19 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_printf(const char *format, ...)
 			format++;
 			if (*format == ' ' || *format == '\0')
 				return (-1);	
-			total_len += ft_hendle_args(args, *format);
+			total_len += ft_handle_args(args, *format);
 		}
 		else
 			total_len += ft_print_char(*format);

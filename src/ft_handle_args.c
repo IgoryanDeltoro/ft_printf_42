@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hendle_args.c                                   :+:      :+:    :+:   */
+/*   ft_handle_args.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:23:31 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/26 09:27:59 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/10/02 23:20:42 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_hendle_args(va_list args, char format)
+int	ft_handle_args(va_list args, char format)
 {
 	int	count;
 
