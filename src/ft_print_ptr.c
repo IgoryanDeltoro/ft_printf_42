@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 09:42:30 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/25 16:42:43 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:17:19 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ int	ft_print_ptr(void *ptr)
 
 	count = 0;
 	p = (uintptr_t)ptr;
-	count += write(1, "0x", 2);
 	if (ptr == 0)
-		count += write(1, "0", 1);
+		count += ft_print_str("(nil)");
 	else
 	{
+		count += write(1, "0x", 2);
 		hendle_ptr(p);
 		count += count_ptr(p);
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:48:14 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/25 13:34:15 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:46:13 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,13 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*f == '%')
 		{
+			
 			f++;
+			if (*f == ' ' || *f == '\0')
+			{
+				total_len += ft_print_str("-1");
+				break;
+			}
 			total_len += ft_hendle_args(args, *f);
 		}
 		else
