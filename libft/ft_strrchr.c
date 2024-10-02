@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:31:10 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/13 13:32:35 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:30:00 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

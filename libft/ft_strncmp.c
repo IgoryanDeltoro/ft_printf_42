@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 13:26:02 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/13 11:44:11 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:30:00 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

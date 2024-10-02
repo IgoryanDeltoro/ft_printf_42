@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 14:37:17 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/18 16:10:07 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:30:00 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

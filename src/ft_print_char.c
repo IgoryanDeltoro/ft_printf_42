@@ -6,13 +6,13 @@
 /*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:18:37 by igoryan           #+#    #+#             */
-/*   Updated: 2024/09/25 21:39:51 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/10/02 23:16:14 by igoryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	ft_print_char(char c)
+int	ft_print_char(int c)
 {
 	return (write(1, &c, 1));
 }

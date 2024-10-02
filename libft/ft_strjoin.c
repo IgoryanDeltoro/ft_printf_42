@@ -6,11 +6,11 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:47:21 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/13 13:17:43 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:30:00 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

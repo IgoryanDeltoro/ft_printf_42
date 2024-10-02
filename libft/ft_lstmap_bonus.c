@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static t_list	*ft_lstmap_add_node(t_list **new_list, void *new_content,
 		void (*del)(void *))

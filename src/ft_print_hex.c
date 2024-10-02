@@ -6,34 +6,23 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:51:38 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:42:44 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/26 09:27:59 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_print_hex(unsigned int n, char format)
 {
-	char	*hex_dig;
-	char	*buff;
-	int		len;
-	int		i;
+	int		count;
 
-	len = ft_get_length(n, 16);
-	buff = ft_calloc(len + 1, sizeof(char));
-	if (format == 'X')
-		hex_dig = "0123456789ABCDEF";
-	else if (format == 'x')
-		hex_dig = "0123456789abcdef";
-	i = len - 1;
+	count = 0;
+	char *hex_digits;
+	
+	if (format == 'x')                                                                              hex_digits = "0123456789abcdef";
+	else if (format == 'X')                                                                         hex_digits = "0123456789ABCDEF";
 	if (n == 0)
-		buff[i] = '0';
-	while (n)
-	{
-		buff[i--] = hex_dig[n % 16];
-		n /= 16;
-	}
-	ft_print_str(buff);
-	free(buff);
-	return (len);
+		count += write(1, "0", 1);
+	count += ft_puthex((uintptr_t)n, hex_digits);
+	return (count);
 }
