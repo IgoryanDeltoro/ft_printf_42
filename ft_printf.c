@@ -15,24 +15,20 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list		args;
-	const char	*f;
 	int			total_len;
 
 	va_start(args, format);
-	f = format;
 	total_len = 0;
-	while (*f)
+	while (*format)
 	{
-		if (*f == '%')
+		if (*format == '%')
 		{
-			f++;
-			total_len += ft_hendle_args(args, *f);
+			format++;
+			total_len += ft_hendle_args(args, *format);
 		}
 		else
-		{
-			total_len += ft_print_char(*f);
-		}
-		f++;
+			total_len += write(1, format, 1);		
+		format++;
 	}
 	va_end(args);
 	return (total_len);

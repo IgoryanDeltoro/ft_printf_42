@@ -12,51 +12,16 @@
 
 #include "../ft_printf.h"
 
-static int	count_ptr(uintptr_t n)
-{
-	int	len;
-
-	len = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		len++;
-		n /= 16;
-	}
-	return (len);
-}
-
-static void	hendle_ptr(uintptr_t n)
-{
-	if (n >= 16)
-	{
-		hendle_ptr(n / 16);
-		hendle_ptr(n % 16);
-	}
-	else
-	{
-		if (n <= 9)
-			ft_putchar_fd((n + '0'), 1);
-		else
-			ft_putchar_fd(((n - 10) + 'a'), 1);
-	}
-}
-
 int	ft_print_ptr(void *ptr)
 {
-	uintptr_t	p;
-	int			count;
-
-	count = 0;
-	p = (uintptr_t)ptr;
-	count += write(1, "0x", 2);
-	if (ptr == 0)
-		count += write(1, "0", 1);
-	else
-	{
-		hendle_ptr(p);
-		count += count_ptr(p);
-	}
-	return (count);
+	char *hex_digits;
+   	int len = 0;
+	
+	hex_digits = "0123456789abcdef";
+	if (!ptr)
+        	return (write(1, "(nil)", 5));
+   	len = write(1, "0x", 2);
+    	len += ft_puthex((uintptr_t)ptr, hex_digits);
+    	return (len);
 }
+

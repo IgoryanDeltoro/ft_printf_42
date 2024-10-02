@@ -12,10 +12,10 @@
 
 #include "../ft_printf.h"
 
-int	ft_get_length(unsigned int n, int type)
+int	ft_get_length(uintptr_t n, int type)
 {
 	int	len;
-
+	
 	len = 0;
 	if (n == 0)
 		return (1);
