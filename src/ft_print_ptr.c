@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 09:42:30 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/10/02 23:41:26 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/10/03 13:58:19 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int	ft_print_ptr(void *ptr)
 {
 	char	*hex_digits;
-	int			count;
+	int		count;
 
-	count = 0;	
+	count = 0;
 	hex_digits = "0123456789abcdef";
 	if (ptr == 0)
 		count += ft_print_str("(nil)");
@@ -28,4 +28,3 @@ int	ft_print_ptr(void *ptr)
 	}
 	return (count);
 }
-

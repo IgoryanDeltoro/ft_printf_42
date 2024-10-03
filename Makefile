@@ -9,7 +9,7 @@ AC = ar rc
 
 SRC =	./src/ft_printf.c ./src/ft_print_char.c ./src/ft_handle_args.c ./src/ft_print_str.c \
 		./src/ft_print_ptr.c ./src/ft_print_int.c ./src/ft_print_unsig.c \
-		./src/ft_get_length.c ./src/ft_print_hex.c ./src/ft_puthex.c
+		 ./src/ft_print_hex.c ./src/ft_puthex.c
 OBJ = $(SRC:.c=.o)
 
 .c.o:

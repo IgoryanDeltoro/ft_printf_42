@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igoryan <igoryan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:51:38 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/10/02 23:44:40 by igoryan          ###   ########.fr       */
+/*   Updated: 2024/10/03 09:45:08 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_print_hex(unsigned int n, char format)
 {
-	int	count;
+	int		count;
 	char	*hex_digits;
 
-	count = 0;	
+	count = 0;
 	if (format == 'x')
 		hex_digits = "0123456789abcdef";
 	else if (format == 'X')
-	    hex_digits = "0123456789ABCDEF";
+		hex_digits = "0123456789ABCDEF";
 	if (n == 0)
 		count += ft_print_char('0');
 	else
