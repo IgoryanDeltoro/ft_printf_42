@@ -3,7 +3,7 @@
 int main(void) 
 {
     int x = 42;
-	
+
     printf("\n\n=========== Basic tests for %%c ============\n\n");
     printf(" (len: %d)\n", ft_printf("%c", 'A'));
     printf(" (len: %d)\n\n", printf("%c", 'A'));
@@ -85,8 +85,7 @@ int main(void)
 
 	printf("\n\n====== %%%%%%%%%% =========\n\n");
     printf(" (output: %d)\n", ft_printf("%%%%%"));    
-	printf(" (output: %d)\n", printf("%%%%%"));
-
+	printf(" (output: %d)\n", printf("%%%%%","hi"));
 
     return 0;
 }
